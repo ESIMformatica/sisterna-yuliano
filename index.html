@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Presentación Personal</title>
+
+<style>
+body{
+font-family: Arial;
+background:#0f172a;
+color:white;
+margin:0;
+}
+
+.container{
+width:80%;
+margin:auto;
+margin-top:40px;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+}
+
+h1{
+text-align:center;
+color:#38bdf8;
+}
+
+h2{
+border-bottom:1px solid #38bdf8;
+padding-bottom:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="titulo"></h1>
+
+<h2>Datos Personales</h2>
+<p><strong>Nombre:</strong> <span id="nombre"></span></p>
+<p><strong>Edad:</strong> <span id="edad"></span></p>
+<p><strong>Curso:</strong> <span id="curso"></span></p>
+
+<h2>Habilidades</h2>
+<ul id="habilidades"></ul>
+
+<h2>Lenguajes que manejo</h2>
+<ul id="lenguajes"></ul>
+
+<h2>Gustos</h2>
+<ul id="gustos"></ul>
+
+</div>
+
+<script>
+
+let nombre = "Sistera Yuliano";
+let edad = 16;
+let curso = "5° Año";
+
+let habilidades = ["Programación","Robótica"];
+let lenguajes = ["HTML","CSS","PHP","JavaScript","C++","Python"];
+let gustos = ["Robótica","Programación"];
+
+document.getElementById("titulo").innerText = "Mi Presentación";
+
+document.getElementById("nombre").innerText = nombre;
+document.getElementById("edad").innerText = edad + " años";
+document.getElementById("curso").innerText = curso;
+
+habilidades.forEach(h=>{
+let li=document.createElement("li");
+li.innerText=h;
+document.getElementById("habilidades").appendChild(li);
+});
+
+lenguajes.forEach(l=>{
+let li=document.createElement("li");
+li.innerText=l;
+document.getElementById("lenguajes").appendChild(li);
+});
+
+gustos.forEach(g=>{
+let li=document.createElement("li");
+li.innerText=g;
+document.getElementById("gustos").appendChild(li);
+});
+
+</script>
+
+</body>
+</html>
